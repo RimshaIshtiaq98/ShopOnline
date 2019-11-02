@@ -99,9 +99,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ShopOnile.WebUI\ShopOnile.WebUI.csproj">
+    <ProjectReference Include="..\ShopOnile.WebUI\ShopOnline.WebUI.csproj">
       <Project>{6F1519EE-8F6A-4A58-8EFE-E22D39CDBB40}</Project>
-      <Name>ShopOnile.WebUI</Name>
+      <Name>ShopOnline.WebUI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

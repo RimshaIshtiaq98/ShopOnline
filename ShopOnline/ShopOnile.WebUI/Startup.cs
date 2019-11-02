@@ -1,8 +1,8 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(ShopOnile.WebUI.Startup))]
-namespace ShopOnile.WebUI
+[assembly: OwinStartupAttribute(typeof(ShopOnline.WebUI.Startup))]
+namespace ShopOnline.WebUI
 {
     public partial class Startup
     {

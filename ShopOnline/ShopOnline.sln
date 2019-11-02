@@ -7,13 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopOnline.Core", "ShopOnli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopOnline.Services", "ShopOnline.Services\ShopOnline.Services.csproj", "{50029031-0228-4C8C-B1A0-A3D2A0AF2A66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopOnlie.DataAccess.SQL", "ShopOnlie.DataAccess.SQL\ShopOnlie.DataAccess.SQL.csproj", "{1791DC3C-42B2-4AEA-ABE0-E5131A977344}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopOnline.DataAccess.SQL", "ShopOnlie.DataAccess.SQL\ShopOnline.DataAccess.SQL.csproj", "{1791DC3C-42B2-4AEA-ABE0-E5131A977344}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopOnline.DataAccess.InMemory", "ShopOnline.DataAccess.InMemory\ShopOnline.DataAccess.InMemory.csproj", "{C8CAE5FF-797F-414D-BDF7-1FF2440632E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopOnile.WebUI", "ShopOnile.WebUI\ShopOnile.WebUI.csproj", "{6F1519EE-8F6A-4A58-8EFE-E22D39CDBB40}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopOnline.WebUI", "ShopOnile.WebUI\ShopOnline.WebUI.csproj", "{6F1519EE-8F6A-4A58-8EFE-E22D39CDBB40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopOnile.WebUI.Tests", "ShopOnile.WebUI.Tests\ShopOnile.WebUI.Tests.csproj", "{DB7B6166-7333-42BF-A195-542A8A529CE5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopOnline.WebUI.Tests", "ShopOnile.WebUI.Tests\ShopOnline.WebUI.Tests.csproj", "{DB7B6166-7333-42BF-A195-542A8A529CE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

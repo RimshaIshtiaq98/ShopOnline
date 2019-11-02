@@ -176,6 +176,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -274,6 +275,10 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\ProductManager\Index.cshtml" />
+    <Content Include="Views\ProductManager\Create.cshtml" />
+    <Content Include="Views\ProductManager\Edit.cshtml" />
+    <Content Include="Views\ProductManager\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -288,6 +293,24 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShopOnlie.DataAccess.SQL\ShopOnline.DataAccess.SQL.csproj">
+      <Project>{1791dc3c-42b2-4aea-abe0-e5131a977344}</Project>
+      <Name>ShopOnline.DataAccess.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShopOnline.Core\ShopOnline.Core.csproj">
+      <Project>{e016a042-79a2-4565-9961-057a72abb8cb}</Project>
+      <Name>ShopOnline.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShopOnline.DataAccess.InMemory\ShopOnline.DataAccess.InMemory.csproj">
+      <Project>{c8cae5ff-797f-414d-bdf7-1ff2440632e7}</Project>
+      <Name>ShopOnline.DataAccess.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShopOnline.Services\ShopOnline.Services.csproj">
+      <Project>{50029031-0228-4c8c-b1a0-a3d2a0af2a66}</Project>
+      <Name>ShopOnline.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

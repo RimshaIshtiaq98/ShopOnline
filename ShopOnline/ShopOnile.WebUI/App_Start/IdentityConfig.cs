@@ -10,9 +10,9 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using ShopOnile.WebUI.Models;
+using ShopOnline.WebUI.Models;
 
-namespace ShopOnile.WebUI
+namespace ShopOnline.WebUI
 {
     public class EmailService : IIdentityMessageService
     {

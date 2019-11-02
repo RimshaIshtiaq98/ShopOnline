@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 
-namespace ShopOnile.WebUI.Models
+namespace ShopOnline.WebUI.Models
 {
     public class IndexViewModel
     {

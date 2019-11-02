@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace ShopOnile.WebUI
+namespace ShopOnline.WebUI
 {
     public class FilterConfig
     {

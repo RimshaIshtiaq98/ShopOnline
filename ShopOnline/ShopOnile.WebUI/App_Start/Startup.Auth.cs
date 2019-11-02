@@ -5,9 +5,9 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using ShopOnile.WebUI.Models;
+using ShopOnline.WebUI.Models;
 
-namespace ShopOnile.WebUI
+namespace ShopOnline.WebUI
 {
     public partial class Startup
     {

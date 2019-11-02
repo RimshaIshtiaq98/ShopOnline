@@ -8,9 +8,9 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using ShopOnile.WebUI.Models;
+using ShopOnline.WebUI.Models;
 
-namespace ShopOnile.WebUI.Controllers
+namespace ShopOnline.WebUI.Controllers
 {
     [Authorize]
     public class AccountController : Controller

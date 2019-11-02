@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ShopOnile.WebUI;
-using ShopOnile.WebUI.Controllers;
+using ShopOnline.WebUI;
+using ShopOnline.WebUI.Controllers;
 
-namespace ShopOnile.WebUI.Tests.Controllers
+namespace ShopOnline.WebUI.Tests.Controllers
 {
     [TestClass]
     public class HomeControllerTest
