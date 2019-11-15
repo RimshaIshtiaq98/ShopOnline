@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using ShopOnline.Core.Models;
+using ShopOnline.Core.ViewModel;
 using ShopOnline.DataAccess.InMemory;
 
 namespace ShopOnline.WebUI.Controllers
@@ -11,12 +12,13 @@ namespace ShopOnline.WebUI.Controllers
     public class ProductManagerController : Controller
     {
         ProductRepository repository;
-
+        ProductCategoryRepository product_categories;
 
         //Initalize our products repository 
         public ProductManagerController()
         {
             repository = new ProductRepository();
+            product_categories = new ProductCategoryRepository();
         }
 
         // GET: ProductManager
@@ -30,8 +32,10 @@ namespace ShopOnline.WebUI.Controllers
         //Takes Product info input from form
         public ActionResult Create()
         {
-            Product product = new Product();
-            return View(product);
+            ProductManagerViewModel PMViewModel = new ProductManagerViewModel();
+            PMViewModel.Product = new Product();
+            PMViewModel.ProductCategories = product_categories.Collection();
+            return View(PMViewModel);
         }
 
         //Check validation and add product in local memory
@@ -60,7 +64,10 @@ namespace ShopOnline.WebUI.Controllers
             }
             else 
             {
-                return View(product);
+                ProductManagerViewModel PMViewModel = new ProductManagerViewModel();
+                PMViewModel.Product = new Product();
+                PMViewModel.ProductCategories = product_categories.Collection();
+                return View(PMViewModel);
             }
         }
         //default template returnupdated product and id of the original product
