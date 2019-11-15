@@ -10,13 +10,13 @@ namespace ShopOnile.WebUI.Controllers
 {
     public class ProductCategoryManagerController : Controller
     {
-        ProductCategoryRepository Categoryrepository;
+        InMemoryRepository<ProductCategory> Categoryrepository;
 
 
         //Initalize our products repository 
         public ProductCategoryManagerController()
         {
-            Categoryrepository = new ProductCategoryRepository();
+            Categoryrepository = new InMemoryRepository<ProductCategory>();
         }
 
         // GET: ProductManager

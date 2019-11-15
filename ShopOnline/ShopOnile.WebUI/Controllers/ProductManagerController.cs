@@ -11,14 +11,15 @@ namespace ShopOnline.WebUI.Controllers
 {
     public class ProductManagerController : Controller
     {
-        ProductRepository repository;
-        ProductCategoryRepository product_categories;
+        InMemoryRepository<Product> repository;
+        //  ProductRepository repository;
+        InMemoryRepository<ProductCategory> product_categories;
 
         //Initalize our products repository 
         public ProductManagerController()
         {
-            repository = new ProductRepository();
-            product_categories = new ProductCategoryRepository();
+            repository = new InMemoryRepository<Product>();
+            product_categories = new InMemoryRepository<ProductCategory>();
         }
 
         // GET: ProductManager
