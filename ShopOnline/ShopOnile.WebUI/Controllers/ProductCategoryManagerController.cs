@@ -1,4 +1,5 @@
-﻿using ShopOnline.Core.Models;
+﻿using ShopOnline.Core.Contracts;
+using ShopOnline.Core.Models;
 using ShopOnline.DataAccess.InMemory;
 using System;
 using System.Collections.Generic;
@@ -10,13 +11,13 @@ namespace ShopOnile.WebUI.Controllers
 {
     public class ProductCategoryManagerController : Controller
     {
-        InMemoryRepository<ProductCategory> Categoryrepository;
+        IRepository<ProductCategory> Categoryrepository;
 
 
         //Initalize our products repository 
-        public ProductCategoryManagerController()
+        public ProductCategoryManagerController(IRepository<ProductCategory> ProductCategory)
         {
-            Categoryrepository = new InMemoryRepository<ProductCategory>();
+            Categoryrepository = ProductCategory;
         }
 
         // GET: ProductManager
