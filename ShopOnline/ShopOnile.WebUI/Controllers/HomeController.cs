@@ -1,5 +1,6 @@
 ﻿using ShopOnline.Core.Contracts;
 using ShopOnline.Core.Models;
+using ShopOnline.Core.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,16 +17,26 @@ namespace ShopOnline.WebUI.Controllers
         //Initalize our products repository 
         public HomeController(IRepository<Product> ProductContext, IRepository<ProductCategory> ProductCategoryContext)
         {
-            //repository = new InMemoryRepository<Product>();
-            //product_categories = new InMemoryRepository<ProductCategory>();
             repository = ProductContext;
             product_categories = ProductCategoryContext;
 
         }
-        public ActionResult Index()
+        public ActionResult Index(string Category=null)
         {
-            List<Product> products = repository.Collection().ToList();
-            return View(products); 
+            List<Product> products ;
+            List<ProductCategory> P_category = product_categories.Collection().ToList();
+            if (Category == null)
+            {
+                products = repository.Collection().ToList();
+            }
+            else {
+                products = repository.Collection().Where(p => p.Category == Category).ToList();
+            }
+
+            ProductListViewModel model = new ProductListViewModel();
+            model.Products = products;
+            model.ProductCategories = P_category;
+            return View(model); 
         }
 
         public ActionResult Details(string Id)
