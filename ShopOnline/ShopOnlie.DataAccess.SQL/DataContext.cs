@@ -18,5 +18,7 @@ namespace ShopOnlie.DataAccess.SQL
 
         public DbSet<Product> products { get; set; }
         public DbSet<ProductCategory> productCategories { get; set; }
+        public DbSet<Basket> Basket { get; set; }
+        public DbSet<BasketItem> BasketItem { get; set; }
     }
 }
