@@ -2,6 +2,7 @@ using ShopOnlie.DataAccess.SQL;
 using ShopOnline.Core.Contracts;
 using ShopOnline.Core.Models;
 using ShopOnline.DataAccess.InMemory;
+using ShopOnline.Services;
 using System;
 
 using Unity;
@@ -48,6 +49,9 @@ namespace ShopOnile.WebUI
             // container.RegisterType<IProductRepository, ProductRepository>();
             container.RegisterType < IRepository<Product>, SqlRepository < Product >> ();
             container.RegisterType<IRepository<ProductCategory>, SqlRepository<ProductCategory>>();
+            container.RegisterType<IRepository<Basket>, SqlRepository<Basket>>();
+            container.RegisterType<IRepository<BasketItem>, SqlRepository<BasketItem>>();
+            container.RegisterType<IBasketService, BasketService>();
         }
     }
 }
