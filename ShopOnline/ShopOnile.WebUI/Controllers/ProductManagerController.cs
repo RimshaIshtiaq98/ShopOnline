@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -44,7 +45,7 @@ namespace ShopOnline.WebUI.Controllers
 
         //Check validation and add product in local memory
         [HttpPost]
-        public ActionResult Create(Product product)
+        public ActionResult Create(Product product, HttpPostedFileBase file)
         {
             if (!ModelState.IsValid)
             {
@@ -52,6 +53,11 @@ namespace ShopOnline.WebUI.Controllers
             }
             else 
             {
+                if (file != null)
+                {
+                    product.Image = product.Id + Path.GetExtension(file.FileName);
+                    file.SaveAs(Server.MapPath("//Content//ProductImages//" + product.Image));
+                }
                 repository.Insert(product);
                 repository.Commit();
 
@@ -69,14 +75,14 @@ namespace ShopOnline.WebUI.Controllers
             else 
             {
                 ProductManagerViewModel PMViewModel = new ProductManagerViewModel();
-                PMViewModel.Product = new Product();
+                PMViewModel.Product = product;
                 PMViewModel.ProductCategories = product_categories.Collection();
                 return View(PMViewModel);
             }
         }
         //default template returnupdated product and id of the original product
         [HttpPost]
-        public ActionResult Edit(Product product, string Id)
+        public ActionResult Edit(Product product, string Id,HttpPostedFileBase file)
         {
             Product producToUpdate = repository.Find(Id);
             if (producToUpdate == null)
@@ -89,9 +95,15 @@ namespace ShopOnline.WebUI.Controllers
                 {
                     return View(product);
                 }
+
+                if (file != null)
+                {
+                    producToUpdate.Image = product.Id + Path.GetExtension(file.FileName);
+                    file.SaveAs(Server.MapPath("//Content//ProductImages//" + producToUpdate.Image));
+                }
                 producToUpdate.Category = product.Category;
                 producToUpdate.Description = product.Description;
-                producToUpdate.Image = product.Image;
+               // producToUpdate.Image = product.Image;
                 producToUpdate.Name = product.Name;
                 producToUpdate.Price = product.Price;
 
